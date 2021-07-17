@@ -8,6 +8,8 @@ import mingu.inflearn.config.http.BaseResponse;
 import mingu.inflearn.config.http.BaseResponseCode;
 import mingu.inflearn.domain.Board;
 import mingu.inflearn.domain.BoardType;
+import mingu.inflearn.framework.data.MySQLPageRequest;
+import mingu.inflearn.framework.data.PageRequestParameter;
 import mingu.inflearn.parameter.BoardParameter;
 import mingu.inflearn.parameter.BoardSearchParameter;
 import mingu.inflearn.service.BoardService;
@@ -28,9 +30,11 @@ public class BoardController {
 
     @GetMapping
     @ApiOperation(value = "목록 조회", notes = "게시물 목록 정보를 조회할 수 있습니다.")
-    public BaseResponse<List<Board>> getList(@ApiParam BoardSearchParameter parameter) {
-        log.info("getList");
-        return new BaseResponse<>(boardService.getList(parameter));
+    public BaseResponse<List<Board>> getList(@ApiParam BoardSearchParameter parameter,
+                                             @ApiParam MySQLPageRequest pageRequest) {
+        log.info("pageRequest : {}", pageRequest);
+        PageRequestParameter<BoardSearchParameter> pageRequestParameter = new PageRequestParameter<>(pageRequest, parameter);
+        return new BaseResponse<>(boardService.getList(pageRequestParameter));
     }
 
     @GetMapping("/{boardSeq}")

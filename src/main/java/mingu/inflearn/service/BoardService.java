@@ -2,6 +2,7 @@ package mingu.inflearn.service;
 
 import lombok.RequiredArgsConstructor;
 import mingu.inflearn.domain.Board;
+import mingu.inflearn.framework.data.PageRequestParameter;
 import mingu.inflearn.parameter.BoardParameter;
 import mingu.inflearn.parameter.BoardSearchParameter;
 import mingu.inflearn.repository.BoardRepository;
@@ -16,8 +17,8 @@ import java.util.Map;
 public class BoardService {
     private final BoardRepository boardRepository;
 
-    public List<Board> getList(BoardSearchParameter parameter) {
-        return boardRepository.getList(parameter);
+    public List<Board> getList(PageRequestParameter<BoardSearchParameter> pageRequestParameter) {
+        return boardRepository.getList(pageRequestParameter);
     }
 
     public Board get(int boardSeq) {
