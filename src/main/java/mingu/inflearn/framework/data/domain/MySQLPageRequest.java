@@ -1,4 +1,4 @@
-package mingu.inflearn.framework.data;
+package mingu.inflearn.framework.data.domain;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import io.swagger.annotations.ApiModelProperty;

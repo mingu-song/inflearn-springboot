@@ -1,4 +1,4 @@
-package mingu.inflearn.framework.data;
+package mingu.inflearn.framework.data.domain;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

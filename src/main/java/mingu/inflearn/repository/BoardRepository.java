@@ -1,7 +1,7 @@
 package mingu.inflearn.repository;
 
 import mingu.inflearn.domain.Board;
-import mingu.inflearn.framework.data.PageRequestParameter;
+import mingu.inflearn.framework.data.domain.PageRequestParameter;
 import mingu.inflearn.parameter.BoardParameter;
 import mingu.inflearn.parameter.BoardSearchParameter;
 import org.springframework.stereotype.Repository;

@@ -2,7 +2,7 @@ package mingu.inflearn.service;
 
 import lombok.RequiredArgsConstructor;
 import mingu.inflearn.domain.Board;
-import mingu.inflearn.framework.data.PageRequestParameter;
+import mingu.inflearn.framework.data.domain.PageRequestParameter;
 import mingu.inflearn.parameter.BoardParameter;
 import mingu.inflearn.parameter.BoardSearchParameter;
 import mingu.inflearn.repository.BoardRepository;

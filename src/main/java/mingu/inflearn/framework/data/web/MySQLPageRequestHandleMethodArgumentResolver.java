@@ -1,7 +1,7 @@
-package mingu.inflearn.framework.web;
+package mingu.inflearn.framework.data.web;
 
 import lombok.extern.slf4j.Slf4j;
-import mingu.inflearn.framework.data.MySQLPageRequest;
+import mingu.inflearn.framework.data.domain.MySQLPageRequest;
 import org.apache.commons.lang3.math.NumberUtils;
 import org.springframework.core.MethodParameter;
 import org.springframework.web.bind.support.WebDataBinderFactory;

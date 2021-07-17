@@ -3,7 +3,7 @@ package mingu.inflearn.config;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.module.SimpleModule;
 import mingu.inflearn.domain.BaseCodeLabelEnum;
-import mingu.inflearn.framework.web.MySQLPageRequestHandleMethodArgumentResolver;
+import mingu.inflearn.framework.data.web.MySQLPageRequestHandleMethodArgumentResolver;
 import mingu.inflearn.handler.BaseHandlerInterceptor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -36,11 +36,6 @@ public class WebConfig implements WebMvcConfigurer {
         return new BaseHandlerInterceptor();
     }
 
-    @Override
-    public void addInterceptors(InterceptorRegistry registry) {
-        registry.addInterceptor(baseHandlerInterceptor());
-    }
-
     @Bean
     public ObjectMapper objectMapper() {
         ObjectMapper objectMapper = new ObjectMapper();
@@ -56,6 +51,16 @@ public class WebConfig implements WebMvcConfigurer {
         jsonView.setContentType(MediaType.APPLICATION_JSON_VALUE);
         jsonView.setObjectMapper(objectMapper());
         return jsonView;
+    }
+
+    @Bean
+    public GlobalConfig globalConfig() {
+        return new GlobalConfig();
+    }
+
+    @Override
+    public void addInterceptors(InterceptorRegistry registry) {
+        registry.addInterceptor(baseHandlerInterceptor());
     }
 
     @Override

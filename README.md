@@ -27,7 +27,7 @@
 
 ### E10
 * foreach 조회조건
-  ```xml
+  ```
   AND B.BOARD_TYPE IN (
     <foreach collection="boardTypes" item="value" separator=",">
     #{value}
@@ -38,3 +38,23 @@
 ### E11
 * addArgumentResolvers 를 등록하여 처리
 * Mybatis에서 페이징은 이 방법뿐인가??
+
+### E12
+* annotation(@RequestConfig)을 이용하여, interceptor에서 function 체크
+
+### E13
+* properties 파일을 읽어오는 **스프링** 방식
+  * Class 를 이용하여 필요한 정보를 담아 빈 등록
+
+### E14
+* @EnableScheduling 를 이용한 스케줄링 설정
+* @Scheduled(cron = "#{@schedulerCron}") :: properties 를 이용하여 빈 등록 후 다이나믹하게 설정가능
+
+### E15
+* db 의 String 값과 모델의 Boolean 값의 타입핸들러 설정
+* TypeHandler 를 구현하고, XML 에서 타입핸들러 등록
+
+### E16
+* 파일 업로드를 위한 jsp 생성
+  * jar에서는 jsp 를 동작하기 위해 메인 어플리케이션 파일에 설정이 필요함 :: https://www.baeldung.com/spring-boot-jsp
+    
