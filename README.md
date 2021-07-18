@@ -61,3 +61,7 @@
 ### E17
 * 업로드한 파일을 서버 폴더에 저장하고 해당 정보를 DB에도 저장
 * addResourceHandlers 설정을 통해 입력받은 파일경로를 실제 리소스 경로로 매핑해줌
+
+### E18
+* 업로드된 이미지의 사이즈를 변경하여 웹으로 리턴
+* https://github.com/coobird/thumbnailator 사용

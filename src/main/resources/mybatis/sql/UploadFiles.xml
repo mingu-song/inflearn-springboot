@@ -25,5 +25,17 @@
             NOW()
         )
     </insert>
+    <select id="get" parameterType="int" resultType="mingu.inflearn.domain.UploadFile">
+        SELECT
+            PATHNAME,
+            FILENAME,
+            ORIGINAL_FILENAME,
+            SIZE,
+            CONTENT_TYPE,
+            RESOURCE_PATHNAME,
+            REG_DATE
+        FROM T_UPLOAD_FILE UF
+        WHERE UF.UPLOAD_FILE_SEQ = #{uploadFileSeq}
+    </select>
 
 </mapper>

@@ -49,7 +49,8 @@ dependencies {
     implementation 'javax.servlet:jstl:1.2'
     implementation 'org.apache.tomcat.embed:tomcat-embed-jasper:9.0.50'
 
-
+    // E18
+    implementation 'net.coobird:thumbnailator:0.4.14'
 }
 
 test {
