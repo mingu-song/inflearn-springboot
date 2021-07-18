@@ -65,3 +65,13 @@
 ### E18
 * 업로드된 이미지의 사이즈를 변경하여 웹으로 리턴
 * https://github.com/coobird/thumbnailator 사용
+
+### E19
+* 웹에서 파라메터를 넘기는 방식
+* @RequestParam String id
+* @RequestParam Map<String, Object> paramMap
+* ExampleParameter parameter
+* @PathVariable String id
+* @RequestParam String[] ids
+* @RequestBody ExampleRequestBodyUser requestBody // json
+
