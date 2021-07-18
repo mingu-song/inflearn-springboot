@@ -27,7 +27,9 @@ public class GlobalConfig {
     private ResourceLoader resourceLoader;
 
     private String uploadFilePath;
+    private String uploadResourcePath;
     private String schedulerCron;
+
     private boolean local;
     private boolean dev;
     private boolean prod;
@@ -45,6 +47,7 @@ public class GlobalConfig {
             Resource resource = resourceLoader.getResource(resourcePath);
             Properties properties = PropertiesLoaderUtils.loadProperties(resource);
             this.uploadFilePath = properties.getProperty("uploadFile.path");
+            this.uploadResourcePath = properties.getProperty("uploadFile.resourcePath");
             this.schedulerCron = properties.getProperty("scheduler.cron");
             this.local = activeProfile.equals("local");
             this.dev = activeProfile.equals("dev");

@@ -17,13 +17,13 @@
     
 ### E08
 * Enum 처리를 위해 아래 빈 생성 :: 시리얼라이즈에 정의된 맵형태로 조회됨
-  * BaseCodeLabelEnumJsonSerializer
-  * WebConfig.objectMapper
-  * WebConfig.mappingJackson2JsonView
+* BaseCodeLabelEnumJsonSerializer
+* WebConfig.objectMapper
+* WebConfig.mappingJackson2JsonView
 
 ### E09
 * Mybatis 조건에 일반 클래스 사용하기
-  * test="@org.apache.commons.lang3.StringUtils@isNotEmpty(keyword)"
+* test="@org.apache.commons.lang3.StringUtils@isNotEmpty(keyword)"
 
 ### E10
 * foreach 조회조건
@@ -44,7 +44,7 @@
 
 ### E13
 * properties 파일을 읽어오는 **스프링** 방식
-  * Class 를 이용하여 필요한 정보를 담아 빈 등록
+* Class 를 이용하여 필요한 정보를 담아 빈 등록
 
 ### E14
 * @EnableScheduling 를 이용한 스케줄링 설정
@@ -56,5 +56,8 @@
 
 ### E16
 * 파일 업로드를 위한 jsp 생성
-  * jar에서는 jsp 를 동작하기 위해 메인 어플리케이션 파일에 설정이 필요함 :: https://www.baeldung.com/spring-boot-jsp
+* jar에서는 jsp 를 동작하기 위해 메인 어플리케이션 파일에 설정이 필요함 :: https://www.baeldung.com/spring-boot-jsp
     
+### E17
+* 업로드한 파일을 서버 폴더에 저장하고 해당 정보를 DB에도 저장
+* addResourceHandlers 설정을 통해 입력받은 파일경로를 실제 리소스 경로로 매핑해줌
